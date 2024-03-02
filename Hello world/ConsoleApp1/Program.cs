@@ -1,4 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+// Hola mundo en c#
 
 Console.WriteLine("Hello world");
 
@@ -6,5 +7,15 @@ Console.WriteLine("Hello world");
 
 string name = "wilmar"; // Cadena de caracteres
 int age = 20; // entero
-double height = 1.75;
-bool girlfriend = false;
+double height = 1.75; // decimal
+//bool girlfriend = false; // booleano
+
+Console.WriteLine($"Hola me llamo {name} y tengo {age} años, mido {height} y estos son mis primeros pasos en C#");
+
+// Entrada de datos
+
+string inputName;
+Console.WriteLine("Ingrese su nombre:");
+inputName = Console.ReadLine();
+
+Console.WriteLine($"Hola {inputName}, Bienvenido a mi programa :)");
