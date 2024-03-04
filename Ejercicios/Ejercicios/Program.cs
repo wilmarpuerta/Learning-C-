@@ -30,3 +30,42 @@ resultado = Math.PI * radio * radio;
 
 Console.WriteLine($"El área de tu circulo es de {resultado}");
 
+// Grupo etario
+
+string nameUser;
+double ageUser;
+string ageGroup = "";
+Console.WriteLine("Ingrese su nombre:");
+nameUser = Console.ReadLine();
+
+Console.WriteLine("Ingrese su edad:");
+ageUser = Convert.ToDouble(Console.ReadLine());
+
+if (ageUser < 0)
+{
+    Console.WriteLine("Ingresa un numero valido!!");
+}
+else
+{
+    if (ageUser <= 5)
+    {
+        ageGroup = "Primera Infancia";
+    } else if (ageUser >= 6 && ageUser <= 11)
+    {
+        ageGroup = "Infancia";
+    } else if (ageUser >= 12 && ageUser  <= 18)
+    {
+        ageGroup = "Adolescencia";
+    } else if (ageUser >= 19 && ageUser  <= 26)
+    {
+        ageGroup = "Juventud";
+    } else if (ageUser >= 27 && ageUser  <= 59)
+    {
+        ageGroup = "Adultez";
+    } else
+    {
+        ageGroup = "Persona Mayor";
+    }
+}
+
+Console.WriteLine($"El grupo etario de {nameUser} es de {ageGroup}");
