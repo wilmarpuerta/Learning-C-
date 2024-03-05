@@ -1,4 +1,4 @@
-﻿
+﻿/*
 // Area de un rectangulo
 
 double ladoA;
@@ -32,7 +32,7 @@ Console.WriteLine($"El área de tu circulo es de {resultado}");
 
 // Grupo etario
 
-string nameUser;
+string? nameUser;
 double ageUser;
 string ageGroup = "";
 Console.WriteLine("Ingrese su nombre:");
@@ -69,18 +69,20 @@ else
 }
 
 Console.WriteLine($"El grupo etario de {nameUser} es de {ageGroup}");
-
+*/
 // Juego del casino
+var random = new Random();
 
 int manoJugador = 0;
-int manoDiler = 0;
-string nameJugador = "";
-string switchControl = "Menu";
+int manoDiler = random.Next(1,12) + random.Next(1,12);
+string? nameJugador = "";
+string? switchControl = "Menu";
+string? res = "";
 
 Console.WriteLine("Para iniciar ingrese su nombre:");
 nameJugador = Console.ReadLine();
 
-Console.WriteLine("<<-------------- Bienvenido al CASINO --------------->>\n");
+Console.WriteLine("\n<<-------------- Bienvenido al CASINO --------------->>\n");
 
 while (true)
 {
@@ -92,15 +94,44 @@ while (true)
             break;
         
         case "21":
-            Console.WriteLine($"<<-------------- {nameJugador} Bienvenido al Blackjack --------------->>\n");
+            Console.WriteLine($"\n<<-------------- Bienvenido al Blackjack --------------->>\n");
             do
             {
-                System.Random random = new Random();
-                manoJugador = random.Next(1, 12);
+                int num = random.Next(1, 12);
+                manoJugador = manoJugador + num;
                 Console.WriteLine(
-                    $"Toma tu carta {nameJugador}\nTe salió el numero {manoJugador}\nQuieres tomar otra carta:\ny/n");
+                    $"Toma tu carta {nameJugador}\nTe salió el numero {num}\nQuieres tomar otra carta:\ny/n");
+                res = Console.ReadLine();
 
-            } while (Console.ReadLine() == "y" || Console.ReadLine() == "Y");
+            } while (res is "y" or "Y");
+
+            switch (res)
+            {
+                case "n":
+                    if (manoJugador > 21)
+                    {
+                        Console.WriteLine($"Oh no! te pasaste de 21\nTu mano quedo en {manoJugador}");   
+                    }
+                    else if (manoJugador <= 21 && manoJugador > manoDiler)
+                    {
+                        Console.WriteLine($"Felicidades le has ganano al diler\nLa mano del diler era {manoDiler}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Oh no! ha ganano el diler\nLa mano del diler era {manoDiler}");
+                    }
+                    
+                    Console.WriteLine("Quieres volver a jugar?\ny/n");
+                    res = Console.ReadLine();
+                    manoJugador = 0;
+                    manoDiler = 0;
+                    break;
+            }
+            break;
+        
+        default:
+            Console.WriteLine("Valor ingresado no valido");
+            switchControl = "Menu";
             break;
     }
 
