@@ -69,3 +69,39 @@ else
 }
 
 Console.WriteLine($"El grupo etario de {nameUser} es de {ageGroup}");
+
+// Juego del casino
+
+int manoJugador = 0;
+int manoDiler = 0;
+string nameJugador = "";
+string switchControl = "Menu";
+
+Console.WriteLine("Para iniciar ingrese su nombre:");
+nameJugador = Console.ReadLine();
+
+Console.WriteLine("<<-------------- Bienvenido al CASINO --------------->>\n");
+
+while (true)
+{
+    switch (switchControl)
+    {
+        case "Menu":
+            Console.WriteLine("Ingresa 21 para jugar Blackjack");
+            switchControl = Console.ReadLine();
+            break;
+        
+        case "21":
+            Console.WriteLine($"<<-------------- {nameJugador} Bienvenido al Blackjack --------------->>\n");
+            do
+            {
+                System.Random random = new Random();
+                manoJugador = random.Next(1, 12);
+                Console.WriteLine(
+                    $"Toma tu carta {nameJugador}\nTe salió el numero {manoJugador}\nQuieres tomar otra carta:\ny/n");
+
+            } while (Console.ReadLine() == "y" || Console.ReadLine() == "Y");
+            break;
+    }
+
+}
