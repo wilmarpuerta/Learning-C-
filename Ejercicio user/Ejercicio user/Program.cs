@@ -2,7 +2,7 @@
 
 Console.WriteLine("Ingresa el nombre de usuario:");
 string user = Console.ReadLine();
-Console.WriteLine("Ingresa una contraseña que conlleve '-':");
+Console.WriteLine("Ingresa una contraseña:");
 
 while (true)
 {
@@ -16,7 +16,7 @@ while (true)
         pass += $"{word}-";
     }
 
-    if (passSplit.Length >= 1)
+    if (passSplit.Length > 1)
     {
         Console.WriteLine("Contraseña valida");
         Console.WriteLine($"Tu contraseña es: {pass}");
