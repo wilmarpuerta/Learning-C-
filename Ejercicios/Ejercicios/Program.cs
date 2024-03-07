@@ -118,7 +118,7 @@ while (mainControl == "start")
             }
             else
             {
-                Console.WriteLine($"Oh no! ha ganano el diler\nLa mano del diler era {manoDiler}");
+                Console.WriteLine($"Oh no! ha ganano el diler\nLa mano del diler era {manoDiler}\nTu mano quedo en {manoJugador}");
             }
                     
             Console.WriteLine("Quieres volver a jugar?\ny/n");

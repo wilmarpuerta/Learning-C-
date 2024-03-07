@@ -1,25 +1,46 @@
 ﻿// Ejercicio de usuario
 
-Console.WriteLine("Ingresa el nombre de usuario:");
-string user = Console.ReadLine();
-Console.WriteLine("Ingresa una contraseña:");
+string? nameUser = "";
+string? lastNameUser = "";
+string? clanUser = "";
+int idUser = 0;
+string? res = "";
+string? loginUser = "";
+string? loginPassword = "";
+
+Console.WriteLine("Ingresa tu nombre");
+nameUser = Console.ReadLine();
+
+Console.WriteLine("Ingresa tu apellido");
+lastNameUser = Console.ReadLine();
+
+Console.WriteLine("Ingresa tu clan");
+clanUser = Console.ReadLine();
+
+Console.WriteLine("Ingresa tu identificacion");
+idUser = int.Parse(Console.ReadLine());
+
+Console.WriteLine("<----- Bienvenido al login -------->\n");
 
 while (true)
 {
-    string? pass = Console.ReadLine();
+do
+{
+    Console.WriteLine("Ingresa tu usuario");
+    loginUser = Console.ReadLine();
+    Console.WriteLine("Ingresa una contraseña:");
+    loginPassword = Console.ReadLine();
+    
+    Console.WriteLine("Esta seguro de sus credenciales?\ny/n");
+    res = Console.ReadLine();
+} while (res == "n" || res == "N");
 
-    char[] passSplit = pass.ToCharArray();
-    pass = "";
+string passwordUser = $"{nameUser}-{lastNameUser}-{clanUser}-{idUser}";
 
-    foreach (var word in passSplit)
+
+    if (nameUser == loginUser && passwordUser == loginPassword)
     {
-        pass += $"{word}-";
-    }
-
-    if (passSplit.Length > 1)
-    {
-        Console.WriteLine("Contraseña valida");
-        Console.WriteLine($"Tu contraseña es: {pass}");
+        Console.WriteLine($"Contraseña valida\nBienvenido {nameUser}");
         break;
     }
     else
