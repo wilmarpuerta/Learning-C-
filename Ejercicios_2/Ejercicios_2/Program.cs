@@ -190,13 +190,22 @@ Console.WriteLine($"Tu temperatura en Fahrenheit es:{fahrenheit}");*/
 // corresponde a Halloween o Navidad, validar que se pueda ingresar un mes
 // correcto
 
+using System.Text.RegularExpressions;
 
-/*try
+while (true)
 {
+    Console.WriteLine("Ingresa un mes del año");
+    string? month = Console.ReadLine();
 
+    bool monthInt = Regex.IsMatch(month, "^(1[0-2]|0[1-9]||[1-9])$");
+    bool monthString = Regex.IsMatch(month, "^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)$", RegexOptions.IgnoreCase);
+
+    if (monthInt == true || monthString == true)
+    {
+        break;
+    }
+    else
+    {
+        Console.WriteLine("El valor ingresado no corresponde a un mes");
+    }
 }
-catch (FormatException)
-{
-    
-}*/
-
