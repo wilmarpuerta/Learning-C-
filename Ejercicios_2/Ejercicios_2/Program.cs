@@ -190,22 +190,100 @@ Console.WriteLine($"Tu temperatura en Fahrenheit es:{fahrenheit}");*/
 // corresponde a Halloween o Navidad, validar que se pueda ingresar un mes
 // correcto
 
-using System.Text.RegularExpressions;
+/*using System.Text.RegularExpressions;
 
 while (true)
 {
     Console.WriteLine("Ingresa un mes del año");
     string? month = Console.ReadLine();
-
+    
     bool monthInt = Regex.IsMatch(month, "^(1[0-2]|0[1-9]||[1-9])$");
     bool monthString = Regex.IsMatch(month, "^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)$", RegexOptions.IgnoreCase);
-
+    
     if (monthInt == true || monthString == true)
     {
+        if (month == "10" || month.ToLower() == "octubre")
+        {
+            Console.WriteLine("El mes ingresado coresponde a Halloween");
+        }
+        else if (month == "12" || month.ToLower() == "diciembre")
+        {
+            Console.WriteLine("El mes ingresado coresponde a Navidad");
+        }
+        else
+        {
+            Console.WriteLine("El mes ingresado no coresponde a Halloween o Navidad");
+        }
         break;
     }
     else
     {
         Console.WriteLine("El valor ingresado no corresponde a un mes");
     }
+}*/
+
+
+// Solicita al usuario ingresar las longitudes de los lados de un triángulo y determina
+// si es equilátero, isósceles o escaleno.
+
+/*Console.WriteLine("Ingresa el valor del lado A del triangulo");
+int? ladoA = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Ingresa el valor del lado B del triangulo");
+int? ladoB = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Ingresa el valor del lado C del triangulo");
+int? ladoC = int.Parse(Console.ReadLine());
+
+if (ladoA == ladoB && ladoB == ladoC && ladoC == ladoA)
+{
+    Console.WriteLine("El triangulo es equilátero");
 }
+else if (ladoA == ladoB || ladoB == ladoC || ladoC == ladoA)
+{
+    Console.WriteLine("El triangulo es isósceles");
+}
+else if (ladoA != ladoB && ladoB != ladoC && ladoC != ladoA)
+{
+    Console.WriteLine("El triangulo es escaleno");   
+}*/
+
+
+// Se ingresan por teclado tres números, si todos los valores ingresados son
+// menores a 10, imprimir en consola "Todos los números son menores a diez"
+
+/*Console.WriteLine("Ingresa un numero aleatorio");
+int number1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Ingresa otro numero aleatorio");
+int number2 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Ingresa otro numero aleatorio");
+int number3 = Convert.ToInt32(Console.ReadLine());
+
+if (number1 < 10 && number2 < 10 && number3 < 10)
+{
+    Console.WriteLine("Todos los números son menores a diez");
+}
+else if (number1 > 10 && number2 > 10 && number3 > 10)
+{
+    Console.WriteLine("Todos los números son mayores a diez");
+}
+else
+{
+    Console.WriteLine("No todos los numeros son menores a diez");
+}*/
+
+
+// Crea un programa que solicite al usuario el monto total de la factura y el
+// porcentaje de propina que desea dejar. Luego, calcula el monto de la propina 
+// muestra el total a pagar
+
+
+/*Console.WriteLine("Ingresa el monto total de la factura");
+int monto = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Ingresa el porcentaje de la propina que desea dejar");
+double propina = Convert.ToDouble(Console.ReadLine());
+
+double porcentaje = monto * */
