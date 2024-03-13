@@ -284,6 +284,104 @@ else
 int monto = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Ingresa el porcentaje de la propina que desea dejar");
-double propina = Convert.ToDouble(Console.ReadLine());
+double porcentaje = Convert.ToDouble(Console.ReadLine());
 
-double porcentaje = monto * */
+double propina = (porcentaje / 100) * monto;
+
+Console.WriteLine($"El monto a pagar es de {propina + monto}");*/
+
+
+// Pide al usuario ingresar el precio de un producto y el porcentaje de descuento
+// aplicable. Luego, calcula el precio final después del descuento.
+
+/*Console.WriteLine("Ingresa el precio del producto");
+int monto = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Ingresa el porcentaje de descuento");
+double porcentaje = Convert.ToDouble(Console.ReadLine());
+
+double propina = (porcentaje / 100) * monto;
+
+Console.WriteLine($"El total a pagar es de {monto - propina}");*/
+
+
+// Se ingresan tres valores por teclado, si todos son iguales se imprime la suma del
+// primero con el segundo y a este resultado se lo multiplica por el tercero
+
+
+
+
+// Secuencia de Collatz:
+
+// Escribe un programa que tome un número inicial del usuario y muestre la secuencia de
+// Collatz para ese número. La secuencia de Collatz se define como sigue: Si el número es
+// par, divídelo por 2; si es impar, multiplícalo por 3 y súmale 1. Repite este proceso hasta
+// que el número sea igual a 1.
+
+/*int N;
+do
+{
+    Console.WriteLine("Ingresa un numero entero:");
+    N = Convert.ToInt32(Console.ReadLine());
+
+} while ( N <= 0 );
+
+while (true)
+{
+    if (N == 1)
+    {
+        Console.WriteLine("El numero es igual a 1");
+        break;
+    }
+    else if (N % 2 == 0)
+    {
+        N = N / 2;
+        Console.WriteLine("El numero es par entonces se divide por 2");
+    }
+    else
+    {
+        N = N * 3 + 1;
+        Console.WriteLine("El numero es impar entonces se multiplica por 3 y se le suma 1");
+    }
+}*/
+
+
+// Secuencia Fibonacci:
+
+// Pide al usuario un número entero N y muestra los primeros N términos de la secuencia
+// Fibonacci. La secuencia Fibonacci comienza con 0 y 1, y cada término subsiguiente es la
+// suma de los dos términos anteriores.
+
+
+Console.WriteLine("Ingresa un numero entero:");
+int N = Convert.ToInt32(Console.ReadLine());
+
+int Fn1 = 0;
+int Fn2 = 1;
+int suma = 0;
+
+if (N != 0)
+{
+    for (int i = 0; i < N; i++)
+    {
+        if (N == 1 || N == 2)
+        {
+            suma = N;
+            break;
+        }
+
+        suma = Fn1 + Fn2;
+
+        if (suma == N || suma > N)
+        {
+            Console.WriteLine($"Estos son los numeros de Fibonacci que estan por debajo de {N}");
+            break;
+        }
+
+        Console.WriteLine($"La secuencia de Fibonacci es {suma}");
+
+        Fn1 = Fn2;
+        Fn2 = suma;
+    }
+}
+
