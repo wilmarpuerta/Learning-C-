@@ -308,6 +308,100 @@ Console.WriteLine($"El total a pagar es de {monto - propina}");*/
 // Se ingresan tres valores por teclado, si todos son iguales se imprime la suma del
 // primero con el segundo y a este resultado se lo multiplica por el tercero
 
+/*int valor1, valor2, valor3;
+
+Console.WriteLine("Ingresa el primer numero");
+valor1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Ingresa el segundo numero");
+valor2 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Ingresa el tercer numero");
+valor3 = Convert.ToInt32(Console.ReadLine());
+
+if (valor1 == valor2 && valor2 == valor3)
+{
+    Console.WriteLine($"Los tres numeros son iguales. se realiza la siguiente operacion:\nSe suman los dos primeros valores y se multiplican por el tercer numero\nEl resultado es el siguiente:\n{(valor1 + valor2) * valor3}");
+}
+else
+{
+    Console.WriteLine("Los numeros ingresados no son iguales");
+}*/
+
+
+// De un operario se conoce su sueldo y los años de antigüedad. Se pide
+// confeccionar un programa que lea los datos de entrada e informe:
+// a) Si el sueldo es inferior a 500 y su antigüedad es igual o superior a 10 años,
+// otorgarle un aumento del 20 %, mostrar el sueldo a pagar.
+// b) Si el sueldo es inferior a 500 pero su antigüedad es menor a 10 años, otorgarle
+// un aumento de 5 %. mostrar el sueldo a pagar.
+// c) Si el sueldo es mayor o igual a 500 mostrar el sueldo en pantalla sin cambios.
+// mostrar el sueldo a pagar.
+
+
+/*Console.WriteLine("Ingresa el sueldo del operario:");
+int sueldo = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Ingresa los años de antigüedad del operario:");
+int ageAntiguedad = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Informe");
+
+if (sueldo < 500 && ageAntiguedad >= 10)
+{
+    Console.WriteLine($"Al operario se le otorga un aumento del 20 %, total de sueldo: {sueldo + ((sueldo * 20 )/ 100)}");
+}
+else if (sueldo < 500 && ageAntiguedad < 10)
+{
+    Console.WriteLine($"Al operario se le otorga un aumento del 5 %, total de sueldo: {sueldo + ((sueldo * 5) / 100)}");
+}
+else if (sueldo > 500 )
+{
+    Console.WriteLine($"Al operario no se le otorga un aumento, total de sueldo: {sueldo}");
+}*/
+
+
+// <---------------------------------- Parte 2 Ejercicios ----------------------------------->
+
+// Suma de números pares e impares:
+
+// Escribe un programa que solicite al usuario un número entero positivo X y luego calcule la
+// suma de los números pares y la suma de los números impares desde 1 hasta X. Finalmente,
+// muestra ambas sumas.
+
+/*
+int x, pares = 0, impares = 0;
+
+Console.WriteLine("Escribe un numero entero;");
+x = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 1; i <= x; i++)
+{
+    if (i % 2 == 0)
+    {
+        pares = pares + i;
+    }
+    else
+    {
+        impares = impares + i;
+    }
+}
+
+Console.WriteLine($"La suma de los numeros pares del 1 hasta el {x} es: {pares}\nLa suma de los numeros impares del 1 hasta el {x} es: {impares}");
+*/
+
+
+// Tabla de multiplicar:
+
+// Pide al usuario que ingrese un número entero y muestra la tabla de multiplicar
+// correspondiente a ese número, desde 1 hasta 10.
+
+
+int x;
+
+Console.WriteLine("Escribe un numero entero;");
+x = Convert.ToInt32(Console.ReadLine());
+
 
 
 
@@ -353,7 +447,7 @@ while (true)
 // suma de los dos términos anteriores.
 
 
-Console.WriteLine("Ingresa un numero entero:");
+/*Console.WriteLine("Ingresa un numero entero:");
 int N = Convert.ToInt32(Console.ReadLine());
 
 int Fn1 = 0;
@@ -383,5 +477,5 @@ if (N != 0)
         Fn1 = Fn2;
         Fn2 = suma;
     }
-}
+}*/
 
