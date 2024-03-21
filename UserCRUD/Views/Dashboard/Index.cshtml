@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/dashboard.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/UserCRUD.styles.css" asp-append-version="true" />
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container-bienvenido">
+    <h1 class="text-center">Bienvenido a mi pagina web</h1>
+    <div class="btns">
+        <a class="item-btn" asp-area="" asp-controller="Products" asp-action="Index">Gestion de Productos</a>
+        <a class="item-btn" asp-area="" asp-controller="Auth" asp-action="Register">Registrate</a>
+        <a class="item-btn" asp-area="" asp-controller="Usuarios" asp-action="Index">Gestion de Usuarios</a>
+    </div>
+    </div>
+</body>
+</html>
