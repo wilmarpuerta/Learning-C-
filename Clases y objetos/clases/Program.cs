@@ -36,6 +36,13 @@ class SuperHeroe {
     public List<SuperPoder> SuperPoderes;
     public bool PuedeVolar;
 
+    // Constructor
+    public SuperHeroe(){
+        Id = 1;
+        SuperPoderes = new List<SuperPoder>();
+        PuedeVolar = false;
+    }
+
 }
 
 // Clase poder
@@ -43,6 +50,11 @@ class SuperPoder{
     public string Nombre;
     public string Descripcion;
     public NivelPoder Nivel;
+
+    // Constructor
+    public SuperPoder(){
+        Nivel = NivelPoder.NivelUno;
+    }
 }
 
 // Enumeracion de poderes
