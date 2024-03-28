@@ -1,7 +1,8 @@
 namespace clases.Models;
 
 // Clase heroe
-public class SuperHeroe {
+public class SuperHeroe : Heroe
+{
     // Encapsulamiento de nombre
     private string _Nombre;
     
@@ -34,5 +35,10 @@ public class SuperHeroe {
         foreach (var item in SuperPoderes)
             Console.WriteLine($"{NombreIdentidadSecreta} esta usando el super poder {item.Nombre}");
     }
-
+    
+    // Abtraccion
+    public override string SalvarElMundo()
+    {
+        return $"{NombreIdentidadSecreta} ha salvado el mundo";
+    }
 }

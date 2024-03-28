@@ -29,6 +29,8 @@ List<SuperPoder> poderesBatman = new List<SuperPoder>();
 poderesBatman.Add(dinero);
 poderesBatman.Add(condicionFisica);
 batman.SuperPoderes = poderesBatman;
+string salvadoElMundo = batman.SalvarElMundo();
+Console.WriteLine(salvadoElMundo);
 
 // Llamado del metodo de la clase
 batman.UsarSuperPoder();
