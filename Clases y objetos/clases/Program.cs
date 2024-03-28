@@ -29,8 +29,11 @@ List<SuperPoder> poderesBatman = new List<SuperPoder>();
 poderesBatman.Add(dinero);
 poderesBatman.Add(condicionFisica);
 batman.SuperPoderes = poderesBatman;
+// Llamado de la clase heroe
 string salvadoElMundo = batman.SalvarElMundo();
 Console.WriteLine(salvadoElMundo);
+string salvadoLaTierra = batman.SalvarLaTierra();
+Console.WriteLine(salvadoLaTierra);
 
 // Llamado del metodo de la clase
 batman.UsarSuperPoder();
@@ -50,5 +53,7 @@ poderesWolverine.Add(condicionFisica);
 wolverine.SuperPoderes = poderesWolverine;
 wolverine.UsarSuperPoder();
 string accionAntiHeroe = wolverine.RealizarAccionAntiHeroe("Atacar a la policia");
-
 Console.WriteLine(accionAntiHeroe);
+
+string salvarLaTierra = wolverine.SalvarLaTierra();
+Console.WriteLine(salvarLaTierra);

@@ -1,7 +1,8 @@
 namespace clases.Models;
 
 // Clase poder
-public class SuperPoder{
+public class SuperPoder
+{
     public string Nombre;
     public string Descripcion;
     public NivelPoder Nivel;

@@ -41,4 +41,10 @@ public class SuperHeroe : Heroe
     {
         return $"{NombreIdentidadSecreta} ha salvado el mundo";
     }
+    
+    // Polimorfismo
+    public override string SalvarLaTierra()
+    {
+        return $"{NombreIdentidadSecreta} ha salvado la tierra";
+    }
 }
