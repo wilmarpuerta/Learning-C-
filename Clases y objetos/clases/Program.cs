@@ -3,12 +3,12 @@
 
 SuperPoder dinero = new SuperPoder();
 dinero.Nombre = "Dinero";
-dinero.Descripcion "El poder del bolsillo :v";
+dinero.Descripcion = "El poder del bolsillo :v";
 dinero.Nivel = NivelPoder.NivelDos;
 
 SuperPoder condicionFisica = new SuperPoder();
 condicionFisica.Nombre = "Condición física al máximo";
-condicionFisica.Descripcion "El poder de entrenar tu cuerpo al maximo";
+condicionFisica.Descripcion = "El poder de entrenar tu cuerpo al maximo";
 condicionFisica.Nivel = NivelPoder.NivelDos;
 
 // Objeto de heroe
@@ -25,7 +25,8 @@ poderesBatman.Add(dinero);
 poderesBatman.Add(condicionFisica);
 
 batman.SuperPoderes = poderesBatman;
-
+// Llamado del metodo de la clase
+batman.UsarSuperPoder();
 
 // Clase heroe
 class SuperHeroe {
@@ -41,6 +42,12 @@ class SuperHeroe {
         Id = 1;
         SuperPoderes = new List<SuperPoder>();
         PuedeVolar = false;
+    }
+
+    // Metodo dentro de una clase
+    public void UsarSuperPoder(){
+        foreach (var item in SuperPoderes)
+        Console.WriteLine($"{Nombre} esta usando el super poder {item.Nombre}");
     }
 
 }
@@ -62,5 +69,4 @@ enum NivelPoder {
     NivelUno,
     NivelDos,
     NivelTres
-
 }
