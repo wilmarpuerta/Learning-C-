@@ -2,8 +2,16 @@ namespace clases.Models;
 
 // Clase heroe
 class SuperHeroe {
+    // Encapsulamiento de nombre
+    private string _Nombre;
+    
     public int Id;
-    public string Nombre;
+
+    public string Nombre
+    {
+        get { return _Nombre; }
+        set { _Nombre = value.Trim(); }
+    }
     public string IdentidadSecreta;
     public string Ciudad;
     public List<SuperPoder> SuperPoderes;

@@ -15,7 +15,7 @@ condicionFisica.Nivel = NivelPoder.NivelDos;
 SuperHeroe batman = new SuperHeroe();
 
 batman.Id = 1;
-batman.Nombre = "Batman";
+batman.Nombre = "   Batman   ";
 batman.IdentidadSecreta = "Bruce Wayne";
 batman.Ciudad = "Ciudad Gótica";
 batman.PuedeVolar = false;
