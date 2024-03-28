@@ -1,7 +1,7 @@
 namespace clases.Models;
 
 // Clase poder
-class SuperPoder{
+public class SuperPoder{
     public string Nombre;
     public string Descripcion;
     public NivelPoder Nivel;
@@ -10,4 +10,11 @@ class SuperPoder{
     public SuperPoder(){
         Nivel = NivelPoder.NivelUno;
     }
+}
+
+// Enumeracion de poderes
+public enum NivelPoder {
+    NivelUno,
+    NivelDos,
+    NivelTres
 }
