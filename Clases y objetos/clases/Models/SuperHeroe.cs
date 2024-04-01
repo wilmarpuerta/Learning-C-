@@ -1,19 +1,21 @@
+using clases.Interface;
+
 namespace clases.Models;
 
 // Clase heroe
-public class SuperHeroe : Heroe
+public class SuperHeroe : Heroe, ISuperHeroe
 {
     // Encapsulamiento de nombre
     private string _Nombre;
-    
-    public int Id;
+    public int Id { get; set; }
 
     public string Nombre
     {
         get { return _Nombre; }
         set { _Nombre = value.Trim(); }
     }
-    public string IdentidadSecreta;
+
+    public string IdentidadSecreta { get; set; }
 
     public string NombreIdentidadSecreta
     {

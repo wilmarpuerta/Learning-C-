@@ -1,4 +1,8 @@
 ﻿using clases.Models;
+using clases;
+
+// Imprimir interface
+ImprimirInfo imprimirInfo = new ImprimirInfo();
 // Objeto de poderes
 
 SuperPoder dinero = new SuperPoder();
@@ -24,6 +28,8 @@ batman.Nombre = "   Batman   ";
 batman.IdentidadSecreta = "Bruce Wayne";
 batman.Ciudad = "Ciudad Gótica";
 batman.PuedeVolar = false;
+// Info
+imprimirInfo.ImprimirSuperHeroe(batman);
 // Creacion de lista de poderes
 List<SuperPoder> poderesBatman = new List<SuperPoder>();
 poderesBatman.Add(dinero);
@@ -46,6 +52,8 @@ wolverine.Id = 2;
 wolverine.Nombre = "   wolverine   ";
 wolverine.IdentidadSecreta = "Logan";
 wolverine.PuedeVolar = false;
+// Info
+imprimirInfo.ImprimirSuperHeroe(wolverine);
 
 List<SuperPoder> poderesWolverine = new List<SuperPoder>();
 poderesWolverine.Add(regeneracion);
