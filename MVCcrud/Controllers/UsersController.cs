@@ -17,4 +17,19 @@ public class UsersController : Controller
     {
         return View(await _context.Users.ToListAsync());
     }
+
+    public async Task<IActionResult> Show(int? id)
+    {
+        return View(await _context.Users.FirstOrDefaultAsync(m => m.Id == id));
+    }
+   
+    public IActionResult Delete()
+        {
+            return View();
+        }
+    
+    public IActionResult Update()
+        {
+            return View();
+        }
 }

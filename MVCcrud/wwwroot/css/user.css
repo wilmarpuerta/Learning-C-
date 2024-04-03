@@ -1,0 +1,16 @@
+﻿
+td:last-child{
+    a{
+        padding: 5px;
+        border-radius: 5px;
+    }
+    a:first-child{
+        background-color: #2AACC9;
+    }
+    a:nth-child(2){
+        background-color: #C92A2A;
+    }
+    a:last-child{
+        background-color: #2e9e4e;
+    }
+}
